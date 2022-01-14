@@ -1,0 +1,127 @@
+html {
+	box-sizing: border-box;
+	font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Red Hat Display", sans-serif;
+	font-size: $font-sm;
+	font-weight: 500;
+	line-height: 1.5;
+	overflow: hidden;
+}
+
+a,
+a:visited,
+a:hover {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+.background {
+	width: 100%;
+	position: relative;
+
+	&::before {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100vh;
+		background-color: $paleBlue;
+	}
+
+	&::after {
+		position: absolute;
+		content: "";
+		width: 100vw;
+		height: 50vh;
+		background-size: contain;
+		background-repeat: repeat-x;
+		background-position: center top;
+
+		@include breakpoint-up(medium) {
+			background-image: url("/images/pattern-background-desktop.svg");
+		}
+	}
+}
+
+.wrapper {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// Flexbox
+.flex {
+	display: flex;
+
+	&-jc-sb {
+		justify-content: space-between;
+	}
+
+	&-jc-c {
+		justify-content: center;
+	}
+
+	&-ai-c {
+		align-items: center;
+	}
+}
+
+// Buttons
+// button,
+// .button {
+// 	position: relative;
+// 	display: inline-block;
+// 	padding: 0.875rem 2.1875rem;
+// 	background-image: linear-gradient(to right, $limeGreen, $brightCyan);
+// 	border: 0;
+// 	border-radius: 3.125rem;
+// 	-webkit-border-radius: 3.125rem;
+// 	-moz-border-radius: 3.125rem;
+// 	-ms-border-radius: 3.125rem;
+// 	-o-border-radius: 3.125rem;
+// 	cursor: pointer;
+// 	color: $white;
+// 	font-weight: 400px;
+// 	overflow: hidden;
+// 	font-size: $font-sm;
+
+// 	&::before {
+// 		content: "";
+// 		position: absolute;
+// 		top: 0;
+// 		right: 0;
+// 		bottom: 0;
+// 		left: 0;
+// 		background-color: rgba(255, 255, 255, 0.4);
+// 		opacity: 0;
+// 		transition: opacity 300ms ease-in-out;
+// 		-webkit-transition: opacity 300ms ease-in-out;
+// 		-moz-transition: opacity 300ms ease-in-out;
+// 		-ms-transition: opacity 300ms ease-in-out;
+// 		-o-transition: opacity 300ms ease-in-out;
+// 	}
+
+// 	&:hover::before {
+// 		opacity: 1;
+// 	}
+// }

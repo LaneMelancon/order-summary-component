@@ -1,0 +1,34 @@
+.card {
+	background-color: $veryPaleBlue;
+	width: 20.43775rem;
+	border-radius: 1rem;
+
+	@include breakpoint-up(medium) {
+		width: 28.125rem;
+	}
+
+	&__image {
+		border-radius: 1rem 1rem 0 0;
+		height: 10rem;
+		background-image: url("/images/illustration-hero.svg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		margin-bottom: 2.375rem;
+
+		@include breakpoint-up(medium) {
+			height: 13.75rem;
+		}
+	}
+
+	&__text {
+		text-align: center;
+		padding: ;
+
+		h1 {
+			color: $darkBlue;
+			font-size: $font-md;
+			@include font-size: $font-lg;
+		}
+	}
+}
