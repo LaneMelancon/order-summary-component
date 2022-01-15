@@ -77,6 +77,7 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 1.5rem;
 }
 
 .flex {
@@ -122,7 +123,6 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  margin-bottom: 2.375rem;
 }
 
 @media (min-width: 40em) {
@@ -133,10 +133,24 @@ p {
 
 .card__text {
   text-align: center;
+  padding: 2.5rem 2.5rem 1.875rem 2.5rem;
+}
+
+@media (min-width: 40em) {
+  .card__text {
+    padding: 2.375rem 4.5rem 1.875rem 4.5rem;
+  }
 }
 
 .card__text h1 {
-  font-size: 1.25rem;
   color: #1f2f56;
+  font-size: 1.375rem;
+  font-weight: 900;
+  margin-bottom: 1.875rem;
+}
+
+.card__text p {
+  font-size: 1rem;
+  color: #7280a7;
 }
 /*# sourceMappingURL=style.css.map */
