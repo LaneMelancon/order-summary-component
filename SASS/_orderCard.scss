@@ -1,5 +1,5 @@
 .card {
-	background-color: $veryPaleBlue;
+	background-color: $white;
 	width: 20.43775rem;
 	border-radius: 1rem;
 
@@ -22,22 +22,98 @@
 
 	&__text {
 		text-align: center;
-		padding: 2.5rem 2.5rem 1.875rem 2.5rem;
-
-		@include breakpoint-up(medium) {
-			padding: 2.375rem 4.5rem 1.875rem 4.5rem;
-		}
+		margin-bottom: 1.875rem;
 
 		h1 {
 			color: $darkBlue;
-			font-size: $font-lg;
+			font-size: $font-xlg;
 			font-weight: 900;
-			margin-bottom: 1.875rem;
+			margin-bottom: 1.5rem;
 		}
 
 		p {
 			font-size: $font-md;
 			color: $desaturatedBlue;
+		}
+	}
+
+	&__info {
+		background-color: $veryPaleBlue;
+		display: flex;
+		align-items: center;
+		padding: 1rem 1rem;
+		border-radius: 1rem;
+		margin-bottom: 1.5rem;
+
+		.icon {
+			width: 3rem;
+			height: 3rem;
+			background-image: url("/images/icon-music.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center center;
+			margin-right: 1.3125rem;
+		}
+
+		.info {
+			display: flex;
+			flex-direction: column;
+			margin-right: 3.1875rem;
+
+			h2 {
+				font-size: $font-sm;
+				font-weight: 900;
+				color: $darkBlue;
+
+				@include breakpoint-up(medium) {
+					font-size: $font-md;
+				}
+			}
+
+			p {
+				font-size: $font-sm;
+				font-weight: 500;
+				color: $desaturatedBlue;
+
+				@include breakpoint-up(medium) {
+					font-size: $font-md;
+				}
+			}
+
+			@include breakpoint-up(medium) {
+				margin-right: 6rem;
+			}
+		}
+
+		a {
+			font-size: $font-sm;
+			font-weight: 700;
+			color: $brightBlue;
+			text-decoration: underline;
+		}
+	}
+
+	&__cta {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 1.5rem;
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	&__cancel {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		a {
+			color: $desaturatedBlue;
+			font-size: $font-md;
+			font-weight: 700;
+			text-decoration: none;
 		}
 	}
 }

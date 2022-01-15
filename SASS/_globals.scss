@@ -19,12 +19,6 @@ body {
 	overflow: hidden;
 }
 
-a,
-a:visited,
-a:hover {
-	text-decoration: none;
-}
-
 h1,
 h2,
 h3,
@@ -70,6 +64,14 @@ p {
 	padding: 0 1.5rem;
 }
 
+.container {
+	padding: 2.5rem 1.5rem 1.875rem 1.5rem;
+
+	@include breakpoint-up(medium) {
+		padding: 2.375rem 3rem 1.875rem 3rem;
+	}
+}
+
 // Flexbox
 .flex {
 	display: flex;
@@ -87,42 +89,20 @@ p {
 	}
 }
 
-// Buttons
-// button,
-// .button {
-// 	position: relative;
-// 	display: inline-block;
-// 	padding: 0.875rem 2.1875rem;
-// 	background-image: linear-gradient(to right, $limeGreen, $brightCyan);
-// 	border: 0;
-// 	border-radius: 3.125rem;
-// 	-webkit-border-radius: 3.125rem;
-// 	-moz-border-radius: 3.125rem;
-// 	-ms-border-radius: 3.125rem;
-// 	-o-border-radius: 3.125rem;
-// 	cursor: pointer;
-// 	color: $white;
-// 	font-weight: 400px;
-// 	overflow: hidden;
-// 	font-size: $font-sm;
-
-// 	&::before {
-// 		content: "";
-// 		position: absolute;
-// 		top: 0;
-// 		right: 0;
-// 		bottom: 0;
-// 		left: 0;
-// 		background-color: rgba(255, 255, 255, 0.4);
-// 		opacity: 0;
-// 		transition: opacity 300ms ease-in-out;
-// 		-webkit-transition: opacity 300ms ease-in-out;
-// 		-moz-transition: opacity 300ms ease-in-out;
-// 		-ms-transition: opacity 300ms ease-in-out;
-// 		-o-transition: opacity 300ms ease-in-out;
-// 	}
-
-// 	&:hover::before {
-// 		opacity: 1;
-// 	}
-// }
+//Buttons
+button,
+.button {
+	width: 22.125rem;
+	position: relative;
+	display: inline-block;
+	padding: 0.875rem 2.1875rem;
+	background-color: $brightBlue;
+	border: 0;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	color: $white;
+	font-weight: 700;
+	overflow: hidden;
+	font-size: $font-md;
+	text-align: center;
+}
