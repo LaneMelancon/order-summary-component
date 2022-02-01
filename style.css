@@ -226,7 +226,7 @@ button,
 .card__info .icon {
 	width: 3rem;
 	height: 3rem;
-	background-image: url("/images/icon-music.svg");
+	background-image: url("images/icon-music.svg");
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center center;
